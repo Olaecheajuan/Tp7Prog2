@@ -14,6 +14,15 @@ public class Documento {
         autores = new ArrayList<>();
         palabrasClaves = new ArrayList<>();
     }
+    public boolean seEncuentraPalabraClave(String palabraClave) {
+        for(int i = 0; i < palabrasClaves.size(); i++){
+            if(palabrasClaves.get(i).equals(palabraClave.toLowerCase())){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public ArrayList<String> getAutores() {
         return new ArrayList<>(autores);
     }
